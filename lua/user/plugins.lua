@@ -91,6 +91,9 @@ return packer.startup(function(use)
 	})
 	-- Todo
 	use({ "renerocksai/telekasten.nvim" }) -- todo tasks dailt notes and stuffs.
+	use({ "renerocksai/calendar-vim" }) -- to work with telekasten plugin.
+	use({ "ellisonleao/glow.nvim" }) -- markdown preview for telekasten.
+
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 

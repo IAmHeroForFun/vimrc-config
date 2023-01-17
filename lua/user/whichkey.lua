@@ -89,7 +89,7 @@ local mappings = {
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = { "<cmd>Telescope find_files<cr>", "Find File" },
+	["f"] = { "<cmd>Telescope find_files<cr>", "Find File" },
 	-- ["f"] = {
 	--   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 	--   "Find files",
@@ -97,10 +97,10 @@ local mappings = {
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
-  m = {
-    name = "media",
-    m = {"<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "media_files"},
-  },
+	m = {
+		name = "media",
+		m = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "media_files" },
+	},
 	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -175,7 +175,6 @@ local mappings = {
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
-
 	t = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -186,7 +185,14 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
+	n = {
+		name = "telekasten",
+		p = { "<cmd>lua require('telekasten').panel()<CR>", "panel" },
+		f = { "<cmd> lua require('telekasten').find_notes()<CR>", "find_notes" },
+		n = { "<cmd>lua require('telekasten').new_note()<CR>", "new_note" },
+		c = { "<cmd>lua require('telekasten').show_calendar()<CR>", "show_calendar" },
+    t = {"<cmd>lua require('telekasten').toggle_todo()<CR>", "Toggle todo"},
+	},
 }
-
 which_key.setup(setup)
 which_key.register(mappings, opts)
