@@ -10,6 +10,10 @@ local actions = require("telescope.actions")
 require("telescope").load_extension("media_files")
 telescope.setup({
 	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"-u",
+		},
 
 		prompt_prefix = " ",
 		selection_caret = " ",
@@ -91,7 +95,7 @@ telescope.setup({
 	extensions = {
 		media_files = {
 			filetype = { "png", "webp", "jpg", "jpeg" },
-      find_cmd = 'rg'
+			find_cmd = "rg",
 		},
 		-- Your extension configuration goes here:
 		-- extension_name = {
