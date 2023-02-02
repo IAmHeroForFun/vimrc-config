@@ -169,16 +169,6 @@ _G.packer_plugins = {
     path = "/home/hero/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["mini.animate"] = {
-    loaded = true,
-    path = "/home/hero/.local/share/nvim/site/pack/packer/start/mini.animate",
-    url = "https://github.com/echasnovski/mini.animate"
-  },
-  ["mini.nvim"] = {
-    loaded = true,
-    path = "/home/hero/.local/share/nvim/site/pack/packer/start/mini.nvim",
-    url = "https://github.com/echasnovski/mini.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/hero/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
