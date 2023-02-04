@@ -190,7 +190,12 @@ local mappings = {
 		f = { "<cmd> lua require('telekasten').find_notes()<CR>", "find_notes" },
 		n = { "<cmd>lua require('telekasten').new_note()<CR>", "new_note" },
 		c = { "<cmd>lua require('telekasten').show_calendar()<CR>", "show_calendar" },
-    t = {"<cmd>lua require('telekasten').toggle_todo()<CR>", "Toggle todo"},
+		t = { "<cmd>lua require('telekasten').toggle_todo()<CR>", "Toggle todo" },
+	},
+	r = {
+		name = "code runner",
+		r = { "<cmd> RunCode<CR>", "runcode" },
+		c = { "<cmd> RunClose<CR>", "closerunner" },
 	},
 }
 which_key.setup(setup)
