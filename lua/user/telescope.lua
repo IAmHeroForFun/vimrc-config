@@ -12,7 +12,13 @@ telescope.setup({
 	defaults = {
 		vimgrep_arguments = {
 			"rg",
-			"-u",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"-uu", -- **This is the setting not being respected**
 		},
 
 		prompt_prefix = " ",
