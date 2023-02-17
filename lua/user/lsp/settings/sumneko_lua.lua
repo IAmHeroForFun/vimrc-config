@@ -8,6 +8,9 @@ return {
 			workspace = {
 				checkThirdParty = false,
 			},
+			telemetry = {
+				enable = false,
+			},
 		},
 	},
 }
