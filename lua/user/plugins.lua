@@ -83,7 +83,11 @@ return packer.startup(function(use)
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }) --file finder
 	use({ "nvim-telescope/telescope-media-files.nvim" }) -- can preview images
-
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",

@@ -5,22 +5,19 @@ end
 
 local actions = require("telescope.actions")
 -- local builtin = require('telescope.builtin')
--- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+-- vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 
 require("telescope").load_extension("media_files")
 telescope.setup({
 	defaults = {
 		vimgrep_arguments = {
 			"rg",
-			"fd",
 			"--color=never",
 			"--no-heading",
 			"--with-filename",
 			"--line-number",
 			"--column",
 			"--smart-case",
-			"--no-ignore", -- **This is the added flag**
-			"--hidden", -- **Also this flag. The combination of the two is the same as `-uu`**
 		},
 
 		prompt_prefix = " ",
@@ -92,6 +89,17 @@ telescope.setup({
 		},
 	},
 	pickers = {
+		find_files = {
+			hidden = true,
+		},
+		live_grep = {
+			--@usage don't include the filename in the search results
+			only_sort_text = true,
+		},
+		git_files = {
+			hidden = true,
+			show_untracked = true,
+		},
 		-- Default configuration for builtin pickers goes here:
 		-- picker_name = {
 		--   picker_config_key = value,
@@ -105,10 +113,22 @@ telescope.setup({
 			filetype = { "png", "webp", "jpg", "jpeg" },
 			find_cmd = "rg",
 		},
+		fzf = {
+			fuzzy = true, -- false will only do exact matching
+			override_generic_sorter = true, -- override the generic sorter
+			override_file_sorter = true, -- override the file sorter
+			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+			-- the default case_mode is "smart_case"
+		},
 		-- Your extension configuration goes here:
 		-- extension_name = {
 		--   extension_config_key = value,
 		-- }
 		-- please take a look at the readme of the extension you want to configure
 	},
+	find_hidden = {
+		hidden_files = true,
+	},
 })
+require("telescope").load_extension("file_browser")
+require("telescope").load_extension("fzf")
