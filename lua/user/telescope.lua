@@ -11,6 +11,7 @@ require("telescope").load_extension("media_files")
 telescope.setup({
 	defaults = {
 		vimgrep_arguments = {
+			"fd",
 			"rg",
 			"--color=never",
 			"--no-heading",
@@ -90,7 +91,7 @@ telescope.setup({
 	},
 	pickers = {
 		find_files = {
-      no_ignore=true
+			no_ignore = true,
 		},
 		live_grep = {
 			--@usage don't include the filename in the search results
