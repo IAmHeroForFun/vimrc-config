@@ -11,6 +11,7 @@ require("telekasten").setup({
 
 	-- dir names for special notes (absolute path or subdir name)
 	dailies = home .. "/" .. "daily",
+	weeklies = home .. "/" .. "weekly",
 	templates = home .. "/" .. "templates",
 
 	-- image (sub)dir for pasting
@@ -43,7 +44,7 @@ require("telekasten").setup({
 	-- following a link to a non-existing note will create it
 	follow_creates_nonexisting = true,
 	dailies_create_nonexisting = true,
-
+	weeklies_create_nonexisting = true,
 	-- skip telescope prompt for goto_today and goto_thisweek
 	journal_auto_open = false,
 
@@ -57,7 +58,7 @@ require("telekasten").setup({
 
 	-- template for newly created weekly notes (goto_thisweek)
 	-- set to `nil` or do not specify if you do not want a template
-
+	template_new_weekly = home .. "/" .. "templates/weekly.md",
 	-- image link style
 	-- wiki:     ![[image name]]
 	-- markdown: ![](image_subdir/xxxxx.png)
