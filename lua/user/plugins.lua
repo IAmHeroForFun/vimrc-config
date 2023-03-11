@@ -102,8 +102,7 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 	-- Automatically set up your configuration after cloning packer.nvim
 
-	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" }) -- code runner
-	-- Put this at the end after all plugins
+	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" }) -- code runner Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
